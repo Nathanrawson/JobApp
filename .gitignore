@@ -1,0 +1,67 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono auto generated)
+mono_crash.*
+
+# Mono auto generated files
+.mono/
+
+# OS generated files
+*.DS_Store
+._*
+*.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Folders to ignore
+.vscode/
+.vs/
+bin/
+obj/
+Debug/
+Release/
+
+# Rider project files
+.idea/
+
+# Auto-generated files by Visual Studio
+Generated_Code/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.log
+*.sublime-workspace
+
+# Compiled DLLs
+*.dll
+*.exe
+*.pdb
+
+# Web specific files
+client/bin/
+client/obj/
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Publish folder
+PublishOutput/

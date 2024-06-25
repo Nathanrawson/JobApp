@@ -1,0 +1,23 @@
+﻿@model Job
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create or Update Job</title>
+</head>
+<body>
+    <h1>@(Model.Id == 0 ? "Create Job" : "Update Job")</h1>
+    <form asp-action="CreateOrUpdate" method="post">
+        <input type="hIdden" asp-for="Id" />
+        <div>
+            <label for="Position">Position:</label>
+            <input type="text" asp-for="Position" required />
+        </div>
+        <div>
+            <label for="Description">Description:</label>
+            <input type="text" asp-for="Description" required />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

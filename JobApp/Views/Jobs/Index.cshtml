@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Job>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Listings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%;">Id</th>
+                <th style="width: 15%;">Position</th>
+                <th style="width: 30%;">Description</th>
+                <th style="width: 15%;">Date Posted</th>
+                <th style="width: 15%;">Date Updated</th>
+                <th style="width: 5%;">Version</th>
+                <th style="width: 15%;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var job in Model)
+            {
+                <tr>
+                    <td>@job.Id</td>
+                    <td>@job.Position</td>
+                    <td>@job.Description</td>
+                    <td>@job.DatePosted</td>
+                    <td>@job.DateUpdated</td>
+                    <td>@job.Version</td>
+                    <td>
+                        <a href="/Jobs/CreateOrUpdate/@job.Id">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Jobs/CreateOrUpdate">Create New Job</a>
+</body>
+</html>
